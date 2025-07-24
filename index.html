@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="style.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">    
     <title>Tugas Bootcamp RevoU (Akbar Azacky)</title>
 </head>
 <body>
-    <form action="">
-        <h1 id="DaftarTugas">Daftar Tugas</h1>
-        <input id="itext" type="text">
-        <input id="idate" type="date">
-        <button id="btn+">+</button>
-    </form>
-    <br>
-    <div>
-    <label>
-      Filter:
-      <select>
+    <h1 id="DaftarTugas">Daftar Tugas</h1>
+        <div class="wrapper">
+            <form class="form-row">
+                <input type="text" placeholder="Add a todo ..." required>
+                <input type="date">
+                <button type="submit">+</button>
+  </form>
+    <label id="Filter">
+      Filter 
+      <select hidden>
         <option value="all">All</option>
         <option value="pending">Pending</option>
         <option value="done">Done</option>
       </select>
     </label>
-    <button type="button">DELETE ALL</button>
   </div>
     <br>
     <Table>
@@ -39,5 +37,7 @@
             <td id="Tugas" colspan="4">Tidak Ada Tugas Yang Ditemukan</td>
         </tbody>
     </Table>
+    <br>
+    <button id="btnhapus" type="button">Hapus Semua</button>
 </body>
 </html>
