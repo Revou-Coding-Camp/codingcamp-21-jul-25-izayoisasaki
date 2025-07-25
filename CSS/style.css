@@ -1,12 +1,13 @@
-/* ---------- RESET ---------- */
+/* reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ---------- BODY ---------- */
+/* body */
 body {
+  justify-content: center;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   background: linear-gradient(135deg, #027b7b 0%, #025858 100%);
   color: #fff;
@@ -17,7 +18,7 @@ body {
   min-height: 100vh;
 }
 
-/* ---------- TITLE ---------- */
+/* title */
 h1 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
@@ -25,43 +26,24 @@ h1 {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
-/* ---------- FORM ---------- */
+/* form */
 form {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.4rem;
   margin-bottom: 1rem;
-  width: 100%;
-  max-width: 420px;
+  width: 100rem;
+  max-width: 595px;
 }
-/* ---------- WRAPPER BARU ---------- */
-.wrapper {
-  width: 100%;
-  max-width: 600px;      /* sama dengan lebar tabel */
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: stretch;  /* semua elemen memenuhi lebar 600 px */
-}
-
-/* ---------- BAR INPUT SEJAJAR ---------- */
-.input-bar {
-  display: flex;
-  gap: .5rem;
-  width: 100%;
-}
-
-.input-bar input[type="text"] { flex: 1; }
-.input-bar input[type="date"] { width: 140px; } /* cukup untuk date */
-.input-bar button            { width: 40px; }  /* tombol + */
 form input[type="text"],
 form input[type="date"] {
   flex: 1;
-  padding: 0.6rem 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 6px;
+  margin-bottom: 20px;
+  width: 140px;
+  padding: 0.6rem 0.85rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
   background: rgba(255, 255, 255, 0.15);
   color: #fff;
-  transition: background 0.2s, border 0.2s;
 }
 form input::placeholder {
   color: rgba(255, 255, 255, 0.7);
@@ -72,15 +54,16 @@ form input:focus {
   border-color: #fff;
 }
 
-form button {
+/* button + */
+button[type="button"] {
   padding: 0.6rem 0.9rem;
+  margin-bottom: 20px;
   background: #ffffff;
   color: #027b7b;
   border: none;
   border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s, transform 0.1s;
 }
 form button:hover {
   background: #f1f1f1;
@@ -89,46 +72,47 @@ form button:active {
   transform: scale(0.96);
 }
 
-/* ---------- CONTROLS ---------- */
-.controls {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 420px;
-  margin-bottom: 1rem;
+/* btn filter */
+#Filter {
+    padding: 0.4rem 0.6rem;
+    background: white;
+    color: #027b7b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+form button#Filter:hover {
+  background: #f1f1f1;
+}
+form button#Filter:active {
+  transform: scale(0.96);
 }
 
-.controls select {
-  padding: 0.35rem 0.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
-  cursor: pointer;
-}
-
-.controls button {
-  padding: 0.35rem 0.75rem;
-  background: #ff5252;
-  color: #fff;
+/* button hapus */
+#btnhapus {
+  padding: 0.3rem 0.3rem;
+  font-family: 'inter',system-ui,sans-serif;
+  margin-left: 490px;
+  background: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 5px;
+  font-size: 0.9rem;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: transform 0.1s;
 }
-.controls button:hover {
-  background: #e53935;
+#btnhapus:hover {
+  transform: scale(1.1);
+  background: #d32f2f;
 }
 
-/* ---------- TABLE ---------- */
+/*  tabel  */
 table {
   width: 100%;
   max-width: 600px;
   border-collapse: collapse;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
+  border-radius: 5px;
   overflow: hidden;
 }
 
@@ -154,4 +138,5 @@ tbody tr:hover {
 
 tbody tr:last-child td {
   border-bottom: none;
+  text-align: center;
 }

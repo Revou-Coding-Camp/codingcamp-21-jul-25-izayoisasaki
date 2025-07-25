@@ -7,33 +7,34 @@
     <title>Tugas Bootcamp RevoU (Akbar Azacky)</title>
 </head>
 <body>
+    <script src="JS/script.js" defer></script>
     <h1 id="DaftarTugas">Daftar Tugas</h1>
         <div class="wrapper">
             <form class="form-row">
-                <input type="text" placeholder="Add a todo ..." required>
-                <input type="date">
-                <button type="submit">+</button>
+                <input id="task_input" type="text" placeholder="Add a todo ..." required>
+                <input id="date_input" type="date">
+                <button type="button" onclick="addTask();">+</button>
   </form>
     <label id="Filter">
       Filter 
-      <select hidden>
-        <option value="all">All</option>
-        <option value="pending">Pending</option>
-        <option value="done">Done</option>
+      <select id="filterselect">
+        <option value="ascending">ascending</option>
+        <option value="descending">descending</option>
       </select>
-    </label>
+    </label> 
   </div>
+
     <br>
-    <Table>
+    <Table class="table">
         <thead>
             <tr>
-                <th>Tugas</th>
+                <th>Tugas</th>  
                 <th>Tanggal Jatuh Tempo</th>
                 <th>Status</th>
                 <th>Tindakan</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="tabel">
             <td id="Tugas" colspan="4">Tidak Ada Tugas Yang Ditemukan</td>
         </tbody>
     </Table>
